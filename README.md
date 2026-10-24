@@ -12,7 +12,7 @@ This repo contains two variants of the project:
 - **[`multi-agent/`](multi-agent/)** — the same objective, but each zone is
   its own agent sharing one policy network (independent PPO / IPPO). See
   [`multi-agent/README.md`](multi-agent/README.md) for why this variant
-  exists and which papers it follows.
+  exists and the papers it follows (Lit review inspiration).
 
 Each subfolder is self-contained: its own `README.md`, `requirements.txt`,
 and `config/config.yaml`. See the subfolder READMEs for setup and run
