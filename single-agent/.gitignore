@@ -1,0 +1,25 @@
+# Downloaded/generated data -- not checked in, regenerate via src/data/*.py
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Trained models (regenerate via src/forecasting/train.py, src/rl/train_agent.py)
+models/*
+!models/.gitkeep
+
+# Generated outputs (schedules, plots, TensorBoard logs)
+outputs/*
+!outputs/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db

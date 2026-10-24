@@ -1,0 +1,66 @@
+# Central configuration for the robotaxi/AV allocation pipeline.
+
+city:
+  name: nyc
+  # Aggregation level for spatial zones:
+  #   "borough"   -> ~6 coarse regions (fast to prototype, small action space)
+  #   "taxi_zone" -> all 265 official NYC TLC taxi zones (fine-grained, slower)
+  zone_level: taxi_zone
+
+data:
+  # NYC TLC yellow taxi trip records (public dataset), one file per month.
+  # Source: https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+  trip_months: ["2024-01", "2024-02", "2024-03"]
+  raw_dir: data/raw
+  processed_dir: data/processed
+  time_bin_minutes: 60
+
+elder_care:
+  # Overpass (OpenStreetMap) query tags used to locate elder-care facilities.
+  amenity_tags:
+    - "amenity=nursing_home"
+    - "amenity=social_facility"
+    - "social_facility=nursing_home"
+    - "social_facility=assisted_living"
+  # Minimum fraction of forecasted demand in an elder-care zone that must be
+  # served by the allocated fleet (hard-ish constraint, enforced via penalty).
+  min_service_level: 0.9
+  # Minimum number of vehicles an elder-care zone must receive regardless of
+  # forecasted demand (floor, avoids zero-coverage edge cases).
+  min_vehicles: 2
+
+fleet:
+  # Matches observed city-wide average demand (~4,300 trips/hour across
+  # boroughs) so elder-care floors are at least physically reachable --
+  # with only 200 vehicles, Manhattan's floor alone needed ~20x the fleet,
+  # making the constraint unactionable rather than merely costly.
+  total_vehicles: 4500
+  reposition_cost_per_vehicle: 1.0   # cost unit per vehicle moved between zones
+  revenue_per_trip_multiplier: 1.0   # scales avg_fare -> revenue per served trip
+
+forecasting:
+  model: seasonal_naive   # one of: seasonal_naive, lstm
+  lookback_steps: 168      # 1 week of hourly bins
+  horizon_steps: 1
+  train_frac: 0.8
+  lstm:
+    hidden_size: 64
+    num_layers: 2
+    epochs: 20
+    lr: 0.001
+    batch_size: 64
+
+rl:
+  algo: PPO
+  total_timesteps: 1000000
+  episode_length_steps: 168  # one simulated week per episode
+  # Cost per zone at 100% elder-care shortfall (shortfall is normalized to
+  # [0,1] of required service level, not a raw vehicle count -- see
+  # fleet_env.py). Scaled so a fully-violated zone costs roughly as much as
+  # the fleet's typical per-step revenue, not orders of magnitude more.
+  elder_care_penalty_weight: 750.0
+  seed: 0
+
+paths:
+  models_dir: models
+  outputs_dir: outputs

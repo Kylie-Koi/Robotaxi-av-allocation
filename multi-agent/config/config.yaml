@@ -1,0 +1,56 @@
+# Multi-agent variant: same objective as the single-agent project
+# (robotaxi_av_allocation) -- maximize profit, prioritize elder-care service --
+# but each zone is its own RL agent instead of one monolithic policy.
+#
+# Starting at borough granularity (7 agents) rather than the 261 taxi zones
+# used in the single-agent version: this validates the multi-agent
+# architecture (parameter sharing, per-agent credit assignment, joint-action
+# feasibility) before scaling to finer zones, mirroring how the single-agent
+# project was itself built up from borough -> taxi_zone level.
+
+city:
+  name: nyc
+  zone_level: borough
+
+data:
+  trip_months: ["2024-01", "2024-02", "2024-03"]
+  raw_dir: data/raw
+  processed_dir: data/processed
+  time_bin_minutes: 60
+
+elder_care:
+  amenity_tags:
+    - "amenity=nursing_home"
+    - "amenity=social_facility"
+    - "social_facility=nursing_home"
+    - "social_facility=assisted_living"
+  min_service_level: 0.9
+  min_vehicles: 2
+
+fleet:
+  total_vehicles: 4500
+  reposition_cost_per_vehicle: 1.0
+  revenue_per_trip_multiplier: 1.0
+
+forecasting:
+  model: seasonal_naive
+  lookback_steps: 168
+  horizon_steps: 1
+  train_frac: 0.8
+  lstm:
+    hidden_size: 64
+    num_layers: 2
+    epochs: 20
+    lr: 0.001
+    batch_size: 64
+
+rl:
+  algo: IPPO   # independent/parameter-shared PPO across zone-agents (via PettingZoo + SuperSuit)
+  total_timesteps: 2000000   # counted per-agent-step (SB3 convention under SuperSuit vectorization)
+  episode_length_steps: 168
+  elder_care_penalty_weight: 750.0
+  seed: 0
+
+paths:
+  models_dir: models
+  outputs_dir: outputs
