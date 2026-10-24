@@ -35,7 +35,7 @@ guarantees](https://www.sciencedirect.com/science/article/pii/S0968090X26001932)
 (paywalled; abstract-level only), and [MADDPG for ride-hailing
 rebalancing](https://arxiv.org/abs/2412.00276).
 
-## What's reused vs. new
+## Reused vs. new
 
 Reused unchanged from the single-agent project (same data, same forecasting):
 `src/data/`, `src/forecasting/`, `src/utils/config.py`. Data files were
