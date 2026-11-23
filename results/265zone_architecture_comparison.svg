@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" role="img" aria-label="Architecture comparison at 265 official taxi zones">
+<rect width="100%" height="100%" fill="white"/>
+<text x="20" y="26" font-size="15" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" fill="#1f2328">Workers-first hierarchy leads at 265 zones; flat decentralization collapses</text>
+<text x="20" y="46" font-size="11" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" fill="#57606a">Equal 1,000,000-sample total compute budget, 10 seeded evaluation episodes</text>
+<text x="40" y="62" font-size="11" fill="#57606a">Profit ($)</text>
+<text x="490" y="62" font-size="11" fill="#57606a">Elder-care violations</text>
+<line x1="30" y1="340" x2="440" y2="340" stroke="#8c959f"/>
+<line x1="480" y1="340" x2="890" y2="340" stroke="#8c959f"/>
+<rect x="61.5" y="113.7" width="54.6" height="226.3" fill="#94a3b8"><title>Single-agent (261 zones): $12.54M profit</title></rect>
+<line x1="88.8" y1="113.1" x2="88.8" y2="114.3" stroke="#8c959f"/>
+<text x="88.8" y="103.1" font-size="10" text-anchor="middle" fill="#1f2328">$12.54M</text>
+<text x="88.8" y="355" font-size="9" text-anchor="middle" fill="#57606a">Single-agent</text>
+<text x="88.8" y="367" font-size="8" text-anchor="middle" fill="#57606a">261 zones</text>
+<rect x="158.9" y="112.0" width="54.6" height="228.0" fill="#94a3b8"><title>Lead-first (265 zones): $12.64M profit</title></rect>
+<line x1="186.2" y1="111.4" x2="186.2" y2="112.5" stroke="#8c959f"/>
+<text x="186.2" y="101.4" font-size="10" text-anchor="middle" fill="#1f2328">$12.64M</text>
+<text x="186.2" y="355" font-size="9" text-anchor="middle" fill="#57606a">Lead-first</text>
+<text x="186.2" y="367" font-size="8" text-anchor="middle" fill="#57606a">265 zones</text>
+<rect x="256.4" y="110.4" width="54.6" height="229.6" fill="#2563eb"><title>Workers-first (265 zones): $12.72M profit</title></rect>
+<line x1="283.8" y1="109.9" x2="283.8" y2="111.0" stroke="#8c959f"/>
+<text x="283.8" y="99.9" font-size="10" text-anchor="middle" fill="#1f2328">$12.72M</text>
+<text x="283.8" y="355" font-size="9" text-anchor="middle" fill="#57606a">Workers-first</text>
+<text x="283.8" y="367" font-size="8" text-anchor="middle" fill="#57606a">265 zones</text>
+<rect x="353.9" y="199.0" width="54.6" height="141.0" fill="#94a3b8"><title>Flat multi-agent (265 zones): $7.82M profit</title></rect>
+<line x1="381.2" y1="198.8" x2="381.2" y2="199.2" stroke="#8c959f"/>
+<text x="381.2" y="188.8" font-size="10" text-anchor="middle" fill="#1f2328">$7.82M</text>
+<text x="381.2" y="355" font-size="9" text-anchor="middle" fill="#57606a">Flat multi-agent</text>
+<text x="381.2" y="367" font-size="8" text-anchor="middle" fill="#57606a">265 zones</text>
+<rect x="511.4" y="241.0" width="54.6" height="99.0" fill="#94a3b8"><title>Single-agent (261 zones): 675.5 elder-care violations</title></rect>
+<line x1="538.8" y1="234.6" x2="538.8" y2="247.4" stroke="#8c959f"/>
+<text x="538.8" y="224.6" font-size="10" text-anchor="middle" fill="#1f2328">675.5</text>
+<text x="538.8" y="355" font-size="9" text-anchor="middle" fill="#57606a">Single-agent</text>
+<text x="538.8" y="367" font-size="8" text-anchor="middle" fill="#57606a">261 zones</text>
+<rect x="609.0" y="233.2" width="54.6" height="106.8" fill="#94a3b8"><title>Lead-first (265 zones): 728.4 elder-care violations</title></rect>
+<line x1="636.2" y1="220.7" x2="636.2" y2="245.7" stroke="#8c959f"/>
+<text x="636.2" y="210.7" font-size="10" text-anchor="middle" fill="#1f2328">728.4</text>
+<text x="636.2" y="355" font-size="9" text-anchor="middle" fill="#57606a">Lead-first</text>
+<text x="636.2" y="367" font-size="8" text-anchor="middle" fill="#57606a">265 zones</text>
+<rect x="706.5" y="273.4" width="54.6" height="66.6" fill="#2563eb"><title>Workers-first (265 zones): 454.4 elder-care violations</title></rect>
+<line x1="733.8" y1="268.0" x2="733.8" y2="278.8" stroke="#8c959f"/>
+<text x="733.8" y="258.0" font-size="10" text-anchor="middle" fill="#1f2328">454.4</text>
+<text x="733.8" y="355" font-size="9" text-anchor="middle" fill="#57606a">Workers-first</text>
+<text x="733.8" y="367" font-size="8" text-anchor="middle" fill="#57606a">265 zones</text>
+<rect x="804.0" y="120.0" width="54.6" height="220.0" fill="#94a3b8"><title>Flat multi-agent (265 zones): 1500.5 elder-care violations</title></rect>
+<line x1="831.2" y1="111.1" x2="831.2" y2="128.9" stroke="#8c959f"/>
+<text x="831.2" y="101.1" font-size="10" text-anchor="middle" fill="#1f2328">1500.5</text>
+<text x="831.2" y="355" font-size="9" text-anchor="middle" fill="#57606a">Flat multi-agent</text>
+<text x="831.2" y="367" font-size="8" text-anchor="middle" fill="#57606a">265 zones</text>
+</svg>

@@ -1,0 +1,4 @@
+architecture,num_zones,total_training_samples,num_learners,samples_per_learner,profit_mean,profit_std,elder_care_violations_mean,elder_care_violations_std,served_demand_rate_mean,served_demand_rate_std
+Single-agent 15-zone (KMeans),15,1000000,1,1000000,14854977.63,88899.46,7.1,1.45,0.9976,0.0013
+Single-agent 30-zone (KMeans),30,1000000,1,1000000,14540226.99,75993.61,94.6,13.09,0.9793,0.0018
+Single-agent 50-zone (KMeans),50,1000000,1,1000000,14712998.67,85406.21,25.1,2.74,0.9905,0.0017

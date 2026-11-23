@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" role="img" aria-label="Zone-count sweep">
+<rect width="100%" height="100%" fill="white"/>
+<text x="20" y="26" font-size="15" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" fill="#1f2328">Zone count's cost to a single policy is not monotonic</text>
+<text x="20" y="46" font-size="11" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" fill="#57606a">Single-agent architecture, k-means zone clustering, equal 1,000,000-sample total compute</text>
+<text x="40" y="62" font-size="11" fill="#57606a">Profit ($)</text>
+<text x="490" y="62" font-size="11" fill="#57606a">Elder-care violations</text>
+<line x1="30" y1="340" x2="440" y2="340" stroke="#8c959f"/>
+<line x1="480" y1="340" x2="890" y2="340" stroke="#8c959f"/>
+<rect x="58.7" y="100.0" width="40.6" height="240.0" fill="#94a3b8"><title>K=7: $14.96M profit</title></rect>
+<line x1="79.0" y1="98.3" x2="79.0" y2="101.7" stroke="#8c959f"/>
+<text x="79.0" y="88.3" font-size="10" text-anchor="middle" fill="#1f2328">$15.0M</text>
+<text x="79.0" y="356" font-size="9" text-anchor="middle" fill="#57606a">K=7</text>
+<rect x="136.7" y="101.8" width="40.6" height="238.2" fill="#94a3b8"><title>K=15: $14.85M profit</title></rect>
+<line x1="157.0" y1="100.3" x2="157.0" y2="103.2" stroke="#8c959f"/>
+<text x="157.0" y="90.3" font-size="10" text-anchor="middle" fill="#1f2328">$14.9M</text>
+<text x="157.0" y="356" font-size="9" text-anchor="middle" fill="#57606a">K=15</text>
+<rect x="214.7" y="106.8" width="40.6" height="233.2" fill="#cf222e"><title>K=30: $14.54M profit</title></rect>
+<line x1="235.0" y1="105.6" x2="235.0" y2="108.0" stroke="#8c959f"/>
+<text x="235.0" y="95.6" font-size="10" text-anchor="middle" fill="#1f2328">$14.5M</text>
+<text x="235.0" y="356" font-size="9" text-anchor="middle" fill="#57606a">K=30</text>
+<rect x="292.7" y="104.0" width="40.6" height="236.0" fill="#94a3b8"><title>K=50: $14.71M profit</title></rect>
+<line x1="313.0" y1="102.7" x2="313.0" y2="105.4" stroke="#8c959f"/>
+<text x="313.0" y="92.7" font-size="10" text-anchor="middle" fill="#1f2328">$14.7M</text>
+<text x="313.0" y="356" font-size="9" text-anchor="middle" fill="#57606a">K=50</text>
+<rect x="370.7" y="138.9" width="40.6" height="201.1" fill="#94a3b8"><title>K=261: $12.54M profit</title></rect>
+<line x1="391.0" y1="138.3" x2="391.0" y2="139.4" stroke="#8c959f"/>
+<text x="391.0" y="128.3" font-size="10" text-anchor="middle" fill="#1f2328">$12.5M</text>
+<text x="391.0" y="356" font-size="9" text-anchor="middle" fill="#57606a">K=261</text>
+<rect x="508.7" y="340.0" width="40.6" height="0.0" fill="#94a3b8"><title>K=7: 0.0 elder-care violations</title></rect>
+<line x1="529.0" y1="340.0" x2="529.0" y2="340.0" stroke="#8c959f"/>
+<text x="529.0" y="330.0" font-size="10" text-anchor="middle" fill="#1f2328">0.0</text>
+<text x="529.0" y="356" font-size="9" text-anchor="middle" fill="#57606a">K=7</text>
+<rect x="586.7" y="337.6" width="40.6" height="2.4" fill="#94a3b8"><title>K=15: 7.1 elder-care violations</title></rect>
+<line x1="607.0" y1="337.2" x2="607.0" y2="338.1" stroke="#8c959f"/>
+<text x="607.0" y="327.2" font-size="10" text-anchor="middle" fill="#1f2328">7.1</text>
+<text x="607.0" y="356" font-size="9" text-anchor="middle" fill="#57606a">K=15</text>
+<rect x="664.7" y="308.7" width="40.6" height="31.3" fill="#cf222e"><title>K=30: 94.6 elder-care violations</title></rect>
+<line x1="685.0" y1="304.3" x2="685.0" y2="313.0" stroke="#8c959f"/>
+<text x="685.0" y="294.3" font-size="10" text-anchor="middle" fill="#1f2328">94.6</text>
+<text x="685.0" y="356" font-size="9" text-anchor="middle" fill="#57606a">K=30</text>
+<rect x="742.7" y="331.7" width="40.6" height="8.3" fill="#94a3b8"><title>K=50: 25.1 elder-care violations</title></rect>
+<line x1="763.0" y1="330.8" x2="763.0" y2="332.6" stroke="#8c959f"/>
+<text x="763.0" y="320.8" font-size="10" text-anchor="middle" fill="#1f2328">25.1</text>
+<text x="763.0" y="356" font-size="9" text-anchor="middle" fill="#57606a">K=50</text>
+<rect x="820.7" y="116.3" width="40.6" height="223.7" fill="#94a3b8"><title>K=261: 675.5 elder-care violations</title></rect>
+<line x1="841.0" y1="101.8" x2="841.0" y2="130.7" stroke="#8c959f"/>
+<text x="841.0" y="91.8" font-size="10" text-anchor="middle" fill="#1f2328">675.5</text>
+<text x="841.0" y="356" font-size="9" text-anchor="middle" fill="#57606a">K=261</text>
+</svg>
