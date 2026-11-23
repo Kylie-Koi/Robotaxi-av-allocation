@@ -10,9 +10,8 @@ environment-interaction samples), how should decision-making authority be
 divided among agents, and how many zones should the city be decomposed
 into?
 
-**Paper:** [`results/paper.pdf`](results/paper.pdf) -- "Optimal Allocation
-Architectures for Robotaxi Fleet Management via Multi-Agent Reinforcement
-Learning." **Results tables:** [`results/`](results/).
+**Paper:** "Optimal Allocation Architectures for Robotaxi Fleet Management
+via Multi-Agent Reinforcement Learning."
 
 ## Architectures
 

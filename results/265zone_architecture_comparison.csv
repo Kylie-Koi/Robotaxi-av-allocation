@@ -1,5 +1,0 @@
-architecture,total_training_samples,num_learners,samples_per_learner,profit_mean,profit_std,elder_care_violations_mean,elder_care_violations_std,served_demand_rate_mean,served_demand_rate_std
-Single-agent 265-zone (reference),1000000,1,1000000,12540227.08,33601.41,675.5,43.61,0.8493,0.0079
-Hierarchical lead-first 265-zone,1000000,261,lead:500000; each worker:~1923,12637833.38,31179.43,728.4,85.06,0.8447,0.0047
-Hierarchical workers-first 265-zone,1000000,261,lead:500000; each worker:~1923,12722416.69,30862.66,454.4,36.92,0.8956,0.0037
-Flat multi-agent 265-zone,1000000,260,3846.15,7815659.58,10574.88,1500.5,60.73,0.6181,0.003

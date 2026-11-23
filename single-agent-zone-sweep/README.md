@@ -10,8 +10,7 @@ single-agent policy at `config.yaml`'s `city.zone_level: kmeans` with
 `city.num_zones` set to 15, 30, and 50 geographic KMeans clusters of the
 261 active taxi zones -- in between the 7-borough and full 261-taxi-zone
 single-agent runs. Each zone count was trained as a separate run (same
-`config.yaml`, `num_zones` changed between runs); see
-[`../results/`](../results/) for the comparison across K.
+`config.yaml`, `num_zones` changed between runs).
 
 ## Pipeline
 
