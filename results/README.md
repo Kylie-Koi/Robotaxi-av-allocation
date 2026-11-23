@@ -4,6 +4,14 @@ Equal-total-compute comparison results (every architecture trained on
 1,000,000 environment-interaction samples total, evaluated over 10 seeded
 episodes).
 
+## Architectures compared
+
+[`architectures_compared.csv`](architectures_compared.csv) -- all twelve
+architecture/zone-count combinations (paper Section 5): zone count,
+number of learners, whether policy weights are shared, and how
+coordination across zones/agents is achieved (joint softmax, parameter
+sharing, or alternating-best-response lead/worker training).
+
 ## Zone-count sweep (single-agent, K=15/30/50)
 
 ![Zone-count sweep: single-agent profit and elder-care violations at K=7, 15, 30, 50, and 261 zones](zone_count_sweep.svg)
