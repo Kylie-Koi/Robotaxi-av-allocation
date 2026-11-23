@@ -1,4 +1,5 @@
 # Robotaxi / AV Fleet Allocation
+## Keep scrolling for quickstart :O
 
 Forecasts robotaxi demand in a city and optimizes fleet allocation with
 reinforcement learning, maximizing profit subject to a service-level
@@ -50,8 +51,8 @@ pip install -r requirements.txt
 python scripts/run_pipeline.py
 ```
 
-> **NOTE:** Run single-agent first -- the other variants' data files are
-> copied locally from it, not redownloaded.
+> **NOTE:** RUN single agent first!! the other variants' data files are
+> copied locally from it, not redownloaded :)
 
 ### Flat multi-agent (one agent per zone, shared policy, IPPO)
 ```bash
