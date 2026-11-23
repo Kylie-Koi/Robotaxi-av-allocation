@@ -1,0 +1,56 @@
+# Multi-agent variant, 10-zone granularity: a midpoint between the borough
+# level (7 agents, robotaxi_av_allocation_multiagent) and the single-agent
+# project's full taxi-zone level (261 zones). Zones here are geographic
+# KMeans clusters of the 265 official taxi zones, not administrative
+# boroughs -- see src/data/preprocess.py's "kmeans" branch.
+#
+# Same objective as both sibling projects: maximize profit, prioritize
+# elder-care service. Only the agent count/granularity changes.
+
+city:
+  name: nyc
+  zone_level: kmeans
+  num_zones: 10
+
+data:
+  trip_months: ["2024-01", "2024-02", "2024-03"]
+  raw_dir: data/raw
+  processed_dir: data/processed
+  time_bin_minutes: 60
+
+elder_care:
+  amenity_tags:
+    - "amenity=nursing_home"
+    - "amenity=social_facility"
+    - "social_facility=nursing_home"
+    - "social_facility=assisted_living"
+  min_service_level: 0.9
+  min_vehicles: 2
+
+fleet:
+  total_vehicles: 4500
+  reposition_cost_per_vehicle: 1.0
+  revenue_per_trip_multiplier: 1.0
+
+forecasting:
+  model: seasonal_naive
+  lookback_steps: 168
+  horizon_steps: 1
+  train_frac: 0.8
+  lstm:
+    hidden_size: 64
+    num_layers: 2
+    epochs: 20
+    lr: 0.001
+    batch_size: 64
+
+rl:
+  algo: IPPO
+  total_timesteps: 1000000   # equal-TOTAL-compute budget: 1,000,000 counted steps shared across all 10 agents (100,000 real ticks/agent)
+  episode_length_steps: 168
+  elder_care_penalty_weight: 750.0
+  seed: 0
+
+paths:
+  models_dir: models
+  outputs_dir: outputs

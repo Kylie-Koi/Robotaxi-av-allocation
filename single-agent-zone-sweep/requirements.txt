@@ -1,0 +1,13 @@
+numpy
+pandas
+pyarrow
+requests
+pyyaml
+scikit-learn
+matplotlib
+geopandas
+shapely
+torch
+gymnasium
+stable-baselines3[extra]
+tensorboard

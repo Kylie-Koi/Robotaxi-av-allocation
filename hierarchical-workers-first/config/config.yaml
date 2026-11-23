@@ -1,0 +1,59 @@
+# Hierarchical variant: a lead/manager agent sets a per-zone "directive"
+# (a target allocation signal), and 7 worker agents (one per borough, shared
+# policy) each refine their own zone's directive before the joint allocation
+# is finalized. Same objective as the flat multi-agent and single-agent
+# siblings: maximize profit, prioritize elder-care service.
+#
+# Design follows Ahilan & Dayan (2019), "Feudal Multi-Agent Hierarchies for
+# Cooperative RL" -- one manager, several simultaneously-acting workers
+# conditioned on the manager's goal -- adapted so the lead optimizes the
+# same global profit/elder-care objective as the single-agent project,
+# while workers optimize their own zone's local outcome.
+
+city:
+  name: nyc
+  zone_level: borough
+
+data:
+  trip_months: ["2024-01", "2024-02", "2024-03"]
+  raw_dir: data/raw
+  processed_dir: data/processed
+  time_bin_minutes: 60
+
+elder_care:
+  amenity_tags:
+    - "amenity=nursing_home"
+    - "amenity=social_facility"
+    - "social_facility=nursing_home"
+    - "social_facility=assisted_living"
+  min_service_level: 0.9
+  min_vehicles: 2
+
+fleet:
+  total_vehicles: 4500
+  reposition_cost_per_vehicle: 1.0
+  revenue_per_trip_multiplier: 1.0
+
+forecasting:
+  model: seasonal_naive
+  lookback_steps: 168
+  horizon_steps: 1
+  train_frac: 0.8
+  lstm:
+    hidden_size: 64
+    num_layers: 2
+    epochs: 20
+    lr: 0.001
+    batch_size: 64
+
+rl:
+  algo: Hierarchical-PPO   # lead (single-agent PPO) + workers (shared IPPO), alternating training
+  episode_length_steps: 168
+  elder_care_penalty_weight: 750.0
+  rounds: 3                     # alternating lead<->worker training rounds
+  lead_timesteps_per_round: 166667      # equal-TOTAL-compute budget: lead gets 500,000 of the 1,000,000 total (x3 rounds)
+  worker_timesteps_per_round: 166667    # workers get the other 500,000 total, shared across all 7 (~23,810 real ticks/worker/round; x3 rounds)
+
+paths:
+  models_dir: models
+  outputs_dir: outputs
